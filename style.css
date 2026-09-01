@@ -212,6 +212,7 @@ p { font-size: 15px; }
 .gemini-prompt-card { padding: 18px; margin-bottom: 20px; }
 .section-description { color: var(--text-muted); font-size: 12px; margin-top: 3px; }
 .gemini-prompt-card .section-header { align-items: flex-start; gap: 12px; }
+.prompt-actions { display: flex; gap: 8px; flex-shrink: 0; }
 .gemini-prompt-card pre {
     background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 12px;
     color: var(--text-main); font: 12px/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -336,7 +337,6 @@ p { font-size: 15px; }
 .dash-mess-label { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
 .dash-mess-items { display: flex; flex-wrap: wrap; gap: 6px; }
 .dash-mess-item { background: var(--bg-main); padding: 4px 10px; border-radius: 12px; font-size: 13px; }
-.dash-mess-more { font-size: 13px; color: var(--accent-color); font-weight: 500; align-self: center; }
 
 .dash-schedule-preview {
     display: flex; align-items: center; gap: 12px; background: var(--bg-main);

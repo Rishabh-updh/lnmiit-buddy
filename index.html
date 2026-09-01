@@ -158,11 +158,14 @@
                         <div class="section-header">
                             <div>
                                 <h3>Generate your menu JSON</h3>
-                                <p class="section-description">Paste this prompt into Gemini with your mess menu PDF.</p>
+                                <p class="section-description">Open this when you need to create a menu file with Gemini.</p>
                             </div>
-                            <button class="btn btn-sm btn-outline" id="copy-gemini-prompt">Copy Prompt</button>
+                            <div class="prompt-actions">
+                                <button class="btn btn-sm btn-outline" id="toggle-gemini-prompt" aria-expanded="false">Show Prompt</button>
+                                <button class="btn btn-sm btn-outline hidden" id="copy-gemini-prompt">Copy Prompt</button>
+                            </div>
                         </div>
-                        <pre id="gemini-prompt-text">Analyze the attached mess menu PDF and return ONLY valid JSON.
+                        <pre class="hidden" id="gemini-prompt-text">Analyze the attached mess menu PDF and create a downloadable file named mess-menu.json containing ONLY valid JSON.
 
 Use exactly this structure:
 {
@@ -175,7 +178,7 @@ Use exactly this structure:
   "Saturday": {"Breakfast": [], "Lunch": [], "Snacks": [], "Dinner": []}
 }
 
-Put every food item as a separate string inside the correct meal array. Include all seven days and all four meals, using [] when a meal is missing. Do not include Markdown code fences, explanations, or any text outside the JSON object.</pre>
+Put every food item as a separate string inside the correct meal array. Include all seven days and all four meals, using [] when a meal is missing. Do not include Markdown code fences, explanations, or any text outside the JSON object. Return the JSON as a downloadable .json file, not just as text.</pre>
                     </div>
 
                     <!-- Today's Menu -->

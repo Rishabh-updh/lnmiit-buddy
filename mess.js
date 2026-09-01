@@ -172,8 +172,7 @@ const MessModule = (() => {
                 </div>
                 <div class="dash-mess-items">
                     ${items.length > 0
-                        ? items.slice(0, 4).map(i => `<span class="dash-mess-item">${i}</span>`).join('')
-                          + (items.length > 4 ? `<span class="dash-mess-more">+${items.length - 4} more</span>` : '')
+                        ? items.map(i => `<span class="dash-mess-item">${i}</span>`).join('')
                         : '<span class="dash-mess-item muted">No items</span>'
                     }
                 </div>
@@ -334,6 +333,7 @@ const MessModule = (() => {
         const uploadBtn = document.getElementById('mess-upload-btn');
         const dropZone = document.getElementById('mess-drop-zone');
         const copyPromptBtn = document.getElementById('copy-gemini-prompt');
+        const togglePromptBtn = document.getElementById('toggle-gemini-prompt');
 
         browseBtn.addEventListener('click', () => fileInput.click());
         uploadBtn.addEventListener('click', () => {
@@ -372,6 +372,14 @@ const MessModule = (() => {
             }
         });
         dropZone.addEventListener('click', () => fileInput.click());
+
+        togglePromptBtn.addEventListener('click', () => {
+            const prompt = document.getElementById('gemini-prompt-text');
+            const isHidden = prompt.classList.toggle('hidden');
+            copyPromptBtn.classList.toggle('hidden', isHidden);
+            togglePromptBtn.textContent = isHidden ? 'Show Prompt' : 'Hide Prompt';
+            togglePromptBtn.setAttribute('aria-expanded', String(!isHidden));
+        });
 
         copyPromptBtn.addEventListener('click', async () => {
             const prompt = document.getElementById('gemini-prompt-text').textContent;

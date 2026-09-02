@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#0f0f1a" rx="96"/>
+  <g transform="translate(0, 10)">
+    <!-- Skull Cap Underneath -->
+    <path d="M147 245 v75 c0 48 48 77 109 77 s109 -29 109 -77 v-75" fill="#800020"/>
+    <path d="M147 258 c40 37 178 37 218 0" stroke="#991b1b" stroke-width="9.5" fill="none"/>
+    
+    <!-- Mortarboard Brim Depth -->
+    <polygon points="85,208 256,288 427,208 427,224 256,304 85,224" fill="#cbd5e1"/>
+
+    <!-- Mortarboard Top -->
+    <polygon points="256,128 427,208 256,288 85,208" fill="#ffffff"/>
+
+    <!-- Center Button -->
+    <circle cx="256" cy="208" r="13" fill="#800020"/>
+
+    <!-- Tassel Cord -->
+    <path d="M256 208 c64 8 138 29 149 82 v83" stroke="#800020" stroke-width="11" fill="none" stroke-linecap="round"/>
+
+    <!-- Tassel Fringe -->
+    <polygon points="389,365 421,365 427,419 383,419" fill="#800020"/>
+    <rect x="387" y="371" width="37" height="8" rx="4" fill="#f59e0b"/>
+  </g>
+</svg>
